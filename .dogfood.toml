@@ -1,0 +1,19 @@
+[portal]
+base_url = "http://localhost:8080"
+
+[tiers]
+claimed = ["T1", "T2"]
+pitch = "A self-hosted, offline-first submission, gallery, and isolated judging portal."
+
+[auth]
+organizer = "Cookie: hacknight_session=1.dogfood-organizer.f5f65be758d0e6295652bd9aaa9ed1ad2db7c06b071467cf27704efa9dc21062"
+judge_a = "Cookie: hacknight_session=2.dogfood-judge_a.6a3779f8681d904e2dc9ae10c16000af762e99cba0d1dbdb2f1930580ce02a75"
+judge_b = "Cookie: hacknight_session=3.dogfood-judge_b.de68792da0aebfee8b4401cb61970c54116218fd8ce49f8ce74e4c00b0e8e9dc"
+participant = "Cookie: hacknight_session=32.dogfood-participant.1aadc7bc4b70aecb8ecb3f94d49939c337065b1eb5ea50d1076c2bba9eed09cc"
+
+[routes]
+gallery = "/projects"
+submit = "/projects/new"
+judge_scores = "/api/judge/scores"
+peer_scores = "/api/judge/scores?judge=judge_a"
+csv_export = "/api/export.csv"
