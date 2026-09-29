@@ -1,0 +1,14 @@
+services:
+  hacknight:
+    build: .
+    ports:
+      - "8080:8000"
+    environment:
+      PORT: 8000
+      DB_PATH: /app/data/hackathon.db
+      SESSION_SECRET: local-compose-secret-change-me
+    volumes:
+      - hacknight_data:/app/data
+
+volumes:
+  hacknight_data:
